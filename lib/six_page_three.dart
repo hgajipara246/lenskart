@@ -11,36 +11,38 @@ class _PageThreeState extends State<PageThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-          height: 70,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black38,
-                offset: Offset(1, 1),
-                blurRadius: 10,
-              ),
-            ],
-          ),
-          child: const Center(
-            child: Text(
-              "START",
-              style: TextStyle(
-                fontFamily: "ProximaNova",
-                shadows: [
-                  Shadow(
-                    color: Colors.black38,
-                    blurRadius: 20,
-                    offset: Offset(0.5, 0.5),
-                  ),
-                ],
-                fontWeight: FontWeight.w500,
-                fontSize: 20,
-                color: Color(0xFF3B2C26),
-              ),
+      bottomNavigationBar: InkWell(
+        child: Container(
+            height: 70,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black38,
+                  offset: Offset(1, 1),
+                  blurRadius: 10,
+                ),
+              ],
             ),
-          )),
+            child: const Center(
+              child: Text(
+                "START",
+                style: TextStyle(
+                  fontFamily: "ProximaNova",
+                  shadows: [
+                    Shadow(
+                      color: Colors.black38,
+                      blurRadius: 20,
+                      offset: Offset(0.5, 0.5),
+                    ),
+                  ],
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                  color: Color(0xFF3B2C26),
+                ),
+              ),
+            )),
+      ),
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
         backgroundColor: const Color(0xFFFFFFFF),

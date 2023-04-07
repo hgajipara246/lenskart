@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lenskart/one_sign_in.dart';
+import 'package:lenskart/four_page_one.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'lenskart screen',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: const SignIn(),
+      home: const PageOne(),
     );
   }
 }

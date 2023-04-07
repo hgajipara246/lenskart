@@ -176,7 +176,7 @@ class _ProductPageState extends State<ProductPage> {
                         style: TextStyle(
                           fontFamily: "ProximaNova",
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,
+                          fontSize: 16,
                           color: Color(0xFFFFFFFF),
                         ),
                       )

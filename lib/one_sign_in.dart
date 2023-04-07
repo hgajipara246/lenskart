@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lenskart/seven_home_page.dart';
+import 'package:lenskart/three_create_account.dart';
+import 'package:lenskart/two_forgot_password.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -16,6 +19,7 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       bottomNavigationBar: Container(
         height: 70,
+        width: double.infinity,
         decoration: const BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -26,21 +30,31 @@ class _SignInState extends State<SignIn> {
             ),
           ],
         ),
-        child: const Center(
-          child: Text(
-            "CREATE ACCOUNT",
-            style: TextStyle(
-              fontFamily: "ProximaNova",
-              shadows: [
-                Shadow(
-                  color: Colors.black38,
-                  blurRadius: 20,
-                  offset: Offset(0.5, 0.5),
+        child: Center(
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CreateAccount(),
                 ),
-              ],
-              fontWeight: FontWeight.w500,
-              fontSize: 16,
-              color: Color(0xFF3B2C26),
+              );
+            },
+            child: Text(
+              "CREATE ACCOUNT",
+              style: TextStyle(
+                fontFamily: "ProximaNova",
+                shadows: [
+                  Shadow(
+                    color: Colors.black38,
+                    blurRadius: 20,
+                    offset: Offset(0.5, 0.5),
+                  ),
+                ],
+                fontWeight: FontWeight.w500,
+                fontSize: 16,
+                color: Color(0xFF3B2C26),
+              ),
             ),
           ),
         ),
@@ -122,58 +136,78 @@ class _SignInState extends State<SignIn> {
                 const SizedBox(
                   height: 30,
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                      color: Color(0xCCA9A9A9),
-                      fontWeight: FontWeight.w600,
-                      fontFamily: "ProximaNova",
-                      fontSize: 16,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ForgotPassword(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        color: Color(0xCCA9A9A9),
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "ProximaNova",
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(
                   height: 130,
                 ),
-                Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: const Color(0xCFFF9700),
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black38,
-                        offset: Offset(1, 1),
-                        blurRadius: 5,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(),
                       ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Icon(
-                          Icons.arrow_forward_outlined,
-                          size: 15,
-                          color: Color(0xFFFFFFFF),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "SIGN IN",
-                          style: TextStyle(
-                            color: Color(0xFFFFFFFF),
-                            fontWeight: FontWeight.w600,
-                            fontFamily: "ProximaNova",
-                            fontSize: 16,
-                          ),
+                    );
+                  },
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xCFFF9700),
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black38,
+                          offset: Offset(1, 1),
+                          blurRadius: 5,
                         ),
                       ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.arrow_forward_outlined,
+                            size: 15,
+                            color: Color(0xFFFFFFFF),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "SIGN IN",
+                            style: TextStyle(
+                              color: Color(0xFFFFFFFF),
+                              fontWeight: FontWeight.w600,
+                              fontFamily: "ProximaNova",
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

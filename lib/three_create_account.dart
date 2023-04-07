@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lenskart/one_sign_in.dart';
 
 class CreateAccount extends StatefulWidget {
   const CreateAccount({Key? key}) : super(key: key);
@@ -26,21 +27,31 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
           ],
         ),
-        child: const Center(
-          child: Text(
-            "SIGN IN",
-            style: TextStyle(
-              fontFamily: "ProximaNova",
-              fontWeight: FontWeight.w500,
-              fontSize: 18,
-              shadows: [
-                Shadow(
-                  color: Colors.black38,
-                  blurRadius: 20,
-                  offset: Offset(0.5, 0.5),
+        child: Center(
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SignIn(),
                 ),
-              ],
-              color: Color(0xFF3B2C26),
+              );
+            },
+            child: Text(
+              "SIGN IN",
+              style: TextStyle(
+                fontFamily: "ProximaNova",
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                shadows: [
+                  Shadow(
+                    color: Colors.black38,
+                    blurRadius: 20,
+                    offset: Offset(0.5, 0.5),
+                  ),
+                ],
+                color: Color(0xFF3B2C26),
+              ),
             ),
           ),
         ),

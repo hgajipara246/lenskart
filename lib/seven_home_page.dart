@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lenskart/eight_product_page.dart';
 
 class HomePage extends StatefulWidget {
   final String? image;
@@ -149,148 +150,178 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Container(
-                        height: 200,
-                        width: 165,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 10,
-                              offset: Offset(1, 1),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductPage(),
                             ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 30),
-                              child: Image.asset(
-                                "assets/images/frames_six.png",
-                                width: 100,
+                          );
+                        },
+                        child: Container(
+                          height: 200,
+                          width: 165,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(25),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 10,
+                                offset: Offset(1, 1),
                               ),
-                            ),
-                            const Text(
-                              "Titan",
-                              style: TextStyle(
-                                fontFamily: "ProximaNova",
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20,
-                                color: Color(0xFF3B2C26),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 30),
+                                child: Image.asset(
+                                  "assets/images/frames_six.png",
+                                  width: 100,
+                                ),
                               ),
-                            ),
-                            const Text(
-                              "\$ 25.0",
-                              style: TextStyle(
-                                fontFamily: "ProximaNova",
-                                fontWeight: FontWeight.w400,
-                                fontSize: 16,
-                                color: Color(0xFF3B2C26),
+                              const Text(
+                                "Titan",
+                                style: TextStyle(
+                                  fontFamily: "ProximaNova",
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 20,
+                                  color: Color(0xFF3B2C26),
+                                ),
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 165,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 10,
-                              offset: Offset(1, 1),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 30),
-                              child: Image.asset(
-                                "assets/images/frames_five.png",
-                                width: 100,
-                              ),
-                            ),
-                            const Text(
-                              "Ray-Ban",
-                              style: TextStyle(
-                                fontFamily: "ProximaNova",
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20,
-                                color: Color(0xFF3B2C26),
-                              ),
-                            ),
-                            const Text(
-                              "\$ 28.0",
-                              style: TextStyle(
-                                fontFamily: "ProximaNova",
-                                fontWeight: FontWeight.w400,
-                                fontSize: 16,
-                                color: Color(0xFF3B2C26),
-                              ),
-                            )
-                          ],
+                              const Text(
+                                "\$ 25.0",
+                                style: TextStyle(
+                                  fontFamily: "ProximaNova",
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                  color: Color(0xFF3B2C26),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        height: 200,
-                        width: 165,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 10,
-                              offset: Offset(1, 1),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductPage(),
                             ),
-                          ],
+                          );
+                        },
+                        child: Container(
+                          height: 200,
+                          width: 165,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(25),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 10,
+                                offset: Offset(1, 1),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 30),
+                                child: Image.asset(
+                                  "assets/images/frames_five.png",
+                                  width: 100,
+                                ),
+                              ),
+                              const Text(
+                                "Ray-Ban",
+                                style: TextStyle(
+                                  fontFamily: "ProximaNova",
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 20,
+                                  color: Color(0xFF3B2C26),
+                                ),
+                              ),
+                              const Text(
+                                "\$ 28.0",
+                                style: TextStyle(
+                                  fontFamily: "ProximaNova",
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                  color: Color(0xFF3B2C26),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 30),
-                              child: Image.asset(
-                                "assets/images/frames_eight.png",
-                                width: 100,
-                              ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductPage(),
                             ),
-                            const Text(
-                              "Prada",
-                              style: TextStyle(
-                                fontFamily: "ProximaNova",
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20,
-                                color: Color(0xFF3B2C26),
+                          );
+                        },
+                        child: Container(
+                          height: 200,
+                          width: 165,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(25),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 10,
+                                offset: Offset(1, 1),
                               ),
-                            ),
-                            const Text(
-                              "\$ 25.0",
-                              style: TextStyle(
-                                fontFamily: "ProximaNova",
-                                fontWeight: FontWeight.w400,
-                                fontSize: 16,
-                                color: Color(0xFF3B2C26),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 30),
+                                child: Image.asset(
+                                  "assets/images/frames_eight.png",
+                                  width: 100,
+                                ),
                               ),
-                            )
-                          ],
+                              const Text(
+                                "Prada",
+                                style: TextStyle(
+                                  fontFamily: "ProximaNova",
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 20,
+                                  color: Color(0xFF3B2C26),
+                                ),
+                              ),
+                              const Text(
+                                "\$ 25.0",
+                                style: TextStyle(
+                                  fontFamily: "ProximaNova",
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                  color: Color(0xFF3B2C26),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
