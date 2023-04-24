@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lenskart/eleven_your_order.dart';
 
 class DeliveryPage extends StatefulWidget {
   const DeliveryPage({Key? key}) : super(key: key);
@@ -162,123 +163,61 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 250,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xCFFF9700),
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x47000000),
-                          offset: Offset(1, 1),
-                          blurRadius: 15,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.add_shopping_cart,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "ADD TO CART",
-                          style: TextStyle(
-                            fontFamily: "ProximaNova",
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20,
-                            color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const YourOrder(),
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Container(
+                      height: 50,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: const Color(0xCFFF9700),
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x47000000),
+                            offset: Offset(1, 1),
+                            blurRadius: 15,
                           ),
-                        )
-                      ],
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.add_shopping_cart,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "ADD TO CART",
+                            style: TextStyle(
+                              fontFamily: "ProximaNova",
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                              color: Color(0xFFFFFFFF),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  home = home == true ? false : true;
-                  setState(() {});
-                },
-                child: Icon(
-                  home == true ? Icons.home_sharp : Icons.home_outlined,
-                  color: home == true ? const Color(0xFF3B2C26) : const Color(0xffBFBDBB),
-                  size: 25,
-                ),
-              ),
-              label: "",
-            ),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  favorite2 = favorite2 == true ? false : true;
-                  setState(() {});
-                },
-                child: Icon(
-                  favorite2 == true ? Icons.notifications : Icons.notifications_none,
-                  color: favorite2 == true ? const Color(0xFF3B2C26) : const Color(0xffBFBDBB),
-                  size: 25,
-                ),
-              ),
-              label: "",
-            ),
-            const BottomNavigationBarItem(
-              icon: CircleAvatar(
-                radius: 25,
-                backgroundColor: Color(0xCFFF9700),
-                child: Icon(
-                  Icons.add,
-                  color: Colors.white,
-                  size: 30,
-                ),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  sell = sell == true ? false : true;
-                  setState(() {});
-                },
-                child: Icon(
-                  sell == true ? Icons.shopping_cart : Icons.shopping_cart_outlined,
-                  color: sell == true ? const Color(0xFF3B2C26) : const Color(0xffBFBDBB),
-                  size: 25,
-                ),
-              ),
-              label: "",
-            ),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  cart = cart == true ? false : true;
-                  setState(() {});
-                },
-                child: Icon(
-                  cart == true ? Icons.settings : Icons.settings_outlined,
-                  color: cart == true ? const Color(0xFF3B2C26) : const Color(0xffBFBDBB),
-                  size: 25,
-                ),
-              ),
-              label: "",
-            ),
-          ],
         ),
       ),
     );

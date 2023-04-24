@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lenskart/five_page_two.dart';
+import 'package:lenskart/six_page_three.dart';
 
 class PageOne extends StatefulWidget {
   const PageOne({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _PageOneState extends State<PageOne> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PageTwo(),
+              builder: (context) => PageThree(),
             ),
           );
         },
@@ -88,7 +89,8 @@ class _PageOneState extends State<PageOne> {
                     height: 20,
                   ),
                   const Text(
-                    "Quickly search add cool frames to \n                     your cart",
+                    textAlign: TextAlign.center,
+                    "Quickly search add cool frames to \nyour cart",
                     style: TextStyle(
                       fontFamily: "ProximaNova",
                       fontWeight: FontWeight.w400,
@@ -101,25 +103,35 @@ class _PageOneState extends State<PageOne> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Center(
-                      child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Text(
-                      "Next",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PageTwo(),
                     ),
-                  )),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Center(
+                        child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        "Next",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    )),
+                  ),
                 ),
               ),
             ],

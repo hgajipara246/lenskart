@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lenskart/one_sign_in.dart';
 
 class PageThree extends StatefulWidget {
   const PageThree({Key? key}) : super(key: key);
@@ -12,46 +13,54 @@ class _PageThreeState extends State<PageThree> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: InkWell(
-        child: Container(
-            height: 70,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black38,
-                  offset: Offset(1, 1),
-                  blurRadius: 10,
-                ),
-              ],
-            ),
-            child: const Center(
-              child: Text(
-                "START",
-                style: TextStyle(
-                  fontFamily: "ProximaNova",
-                  shadows: [
-                    Shadow(
-                      color: Colors.black38,
-                      blurRadius: 20,
-                      offset: Offset(0.5, 0.5),
-                    ),
-                  ],
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                  color: Color(0xFF3B2C26),
-                ),
+        child: InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SignIn(),
               ),
-            )),
+            );
+          },
+          child: Container(
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black38,
+                    offset: Offset(1, 1),
+                    blurRadius: 10,
+                  ),
+                ],
+              ),
+              child: const Center(
+                child: Text(
+                  "START",
+                  style: TextStyle(
+                    fontFamily: "ProximaNova",
+                    shadows: [
+                      Shadow(
+                        color: Colors.black38,
+                        blurRadius: 20,
+                        offset: Offset(0.5, 0.5),
+                      ),
+                    ],
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                    color: Color(0xFF3B2C26),
+                  ),
+                ),
+              )),
+        ),
       ),
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFFFFFFF),
-        elevation: 0,
-        leading: const Icon(
-          Icons.arrow_back_outlined,
-          color: Color(0xFF000000),
-        ),
-      ),
+          backgroundColor: const Color(0xFFFFFFFF),
+          elevation: 0,
+          leading: BackButton(
+            color: Colors.black,
+          )),
       body: SafeArea(
           child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -83,7 +92,8 @@ class _PageThreeState extends State<PageThree> {
                   height: 20,
                 ),
                 const Text(
-                  "Quickly search add cool frames to \n                     your cart",
+                  textAlign: TextAlign.center,
+                  "Quickly search add cool frames to \nyour cart",
                   style: TextStyle(
                     fontFamily: "ProximaNova",
                     fontWeight: FontWeight.w400,

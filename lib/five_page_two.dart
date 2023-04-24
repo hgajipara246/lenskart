@@ -54,13 +54,11 @@ class _PageTwoState extends State<PageTwo> {
       ),
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFFFFFFF),
-        elevation: 0,
-        leading: const Icon(
-          Icons.arrow_back_outlined,
-          color: Color(0xFF000000),
-        ),
-      ),
+          backgroundColor: const Color(0xFFFFFFFF),
+          elevation: 0,
+          leading: const BackButton(
+            color: Colors.black,
+          )),
       body: SafeArea(
           child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -92,7 +90,8 @@ class _PageTwoState extends State<PageTwo> {
                   height: 20,
                 ),
                 const Text(
-                  "Quickly search add cool frames to \n                     your cart",
+                  textAlign: TextAlign.center,
+                  "Quickly search add cool frames to \nyour cart",
                   style: TextStyle(
                     fontFamily: "ProximaNova",
                     fontWeight: FontWeight.w400,
@@ -101,29 +100,39 @@ class _PageTwoState extends State<PageTwo> {
                   ),
                 ),
                 const SizedBox(
-                  height: 200,
+                  height: 175,
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Center(
-                    child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(
-                    "Next",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PageThree(),
                   ),
-                )),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Center(
+                      child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      "Next",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                  )),
+                ),
               ),
             ),
           ],
